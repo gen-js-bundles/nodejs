@@ -23,6 +23,36 @@ module.exports = {
           name: "mongodb",
           version: "*"
         }
+      },{
+        name: "Asynchronous - async - https://www.npmjs.com/package/async",
+        value: {
+          name: "async",
+          version: "*"
+        }
+      },{
+        name: "Promises - q - https://www.npmjs.com/package/q",
+        value: {
+          name: "q",
+          version: "*"
+        }
+      },{
+        name: "Lodash - lodash - https://www.npmjs.com/package/lodash",
+        value: {
+          name: "lodash",
+          version: "*"
+        }
+      },{
+        name: "Express - express - https://www.npmjs.com/package/express",
+        value: {
+          name: "express",
+          version: "*"
+        }
+      },{
+        name: "WebSocket - socket.io - https://www.npmjs.com/package/socket.io",
+        value: {
+          name: "socket.io",
+          version: "*"
+        }
       }
     ];
 
