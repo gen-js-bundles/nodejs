@@ -1,2 +1,5 @@
-# nodejs
-NodeJS
+# Node.js
+
+```
+genjs start nodejs
+```
