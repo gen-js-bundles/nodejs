@@ -1,0 +1,51 @@
+{
+  "name": "<%= project.name %>",
+  "description": "<%= project.description %>",
+  "version": "<%= project.version %>.0",
+  "author": "",
+  "private": false,
+  "homepage": "https://github.com/<%= project.name %>/<%= project.name %>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/<%= project.name %>/<%= project.name %>.git"
+  },
+  "bugs": {
+    "url": "http://github.com/<%= project.name %>/<%= project.name %>/issues"
+  },
+  "licenses": [
+    {
+      "type": "GNU",
+      "url": "https://github.com/<%= project.name %>/<%= project.name %>/blob/master/LICENSE"
+    }
+  ],
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "main": "lib/main.js",
+  "scripts": {
+    "test": "node node_modules/jasmine-node/lib/jasmine-node/cli.js spec",
+    "start": "node lib/main.js"
+  },
+  "devDependencies": {
+<%
+  var dependencies = all.config.tags.build.dependencies;
+  for(int i=0; i<dependencies.length; i++) {
+    var dependency = dependencies[i];
+%>
+    "<%= dependency.name %>": "<%= dependency.version %>"<% if(i<dependencies.length-1) { %>,<% } %>
+<%
+  }
+%>
+  },
+  "dependencies": {
+<%
+  var dependencies = all.config.tags.build.dependencies;
+  for(int i=0; i<dependencies.length; i++) {
+    var dependency = dependencies[i];
+%>
+    "<%= dependency.name %>": "<%= dependency.version %>"<% if(i<dependencies.length-1) { %>,<% } %>
+<%
+  }
+%>
+  }
+}
