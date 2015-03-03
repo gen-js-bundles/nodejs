@@ -28,7 +28,7 @@
   },
   "devDependencies": {
 <%
-  var dependencies = all.config.tags.build.dependencies;
+  var dependencies = _.filter(all.config.tags.build.dependencies, function(dependency) { return dependency.scope == 'test'; });
   for(var i=0; i<dependencies.length; i++) {
     var dependency = dependencies[i];
 %>
@@ -39,7 +39,7 @@
   },
   "dependencies": {
 <%
-  var dependencies = all.config.tags.build.dependencies;
+  var dependencies = _.filter(all.config.tags.build.dependencies, function(dependency) { return dependency.scope != 'test'; });
   for(var i=0; i<dependencies.length; i++) {
     var dependency = dependencies[i];
 %>
