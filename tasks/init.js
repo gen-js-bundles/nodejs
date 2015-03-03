@@ -17,6 +17,13 @@ module.exports = {
           scope: "test"
         },
         checked: true
+      },{
+        name: "Data - MongoDB - mongodb - https://github.com/mongodb/node-mongodb-native",
+        value: {
+          name: "mongodb",
+          version: "*"
+        },
+        checked: true
       }
     ];
 
