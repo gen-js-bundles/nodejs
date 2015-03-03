@@ -22,8 +22,7 @@ module.exports = {
         value: {
           name: "mongodb",
           version: "*"
-        },
-        checked: true
+        }
       }
     ];
 
