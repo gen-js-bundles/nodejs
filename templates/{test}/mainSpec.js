@@ -1,16 +1,19 @@
 var Main = require('../lib/main');
 
 describe("Main : ", function() {
-  var main;
 
   beforeEach(function () {
-    main = new Main();
+    this.main = new Main();
   });
 
-  it("should return 'hello'", function () {
+  it("should be initialized", function () {
+    expect(this.main).not.toBeUndefined();
+  });
+
+  it("should return 'Hello'", function () {
     // when
-    var message = main.hello();
+    var message = this.main.hello();
     // then
-    expect(message).toEqual(message);
+    expect(message).toEqual('Hello');
   });
 });

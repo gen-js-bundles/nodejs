@@ -1,4 +1,3 @@
-
 var Main = (function () {
   function Main() {
   }
@@ -7,3 +6,5 @@ var Main = (function () {
   };
   return Main;
 })();
+
+module.exports = Main;
