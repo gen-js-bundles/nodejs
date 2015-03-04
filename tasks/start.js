@@ -6,9 +6,7 @@ var
 
 module.exports = {
   do: function(data, callback) {
-    // Install
-    console.log('npm install');
-
+    
     var outPath = path.join(process.cwd(),data.Genjsfile.config.outDir);
     
     data.cli.exec('npm install', {cwd: outPath})
