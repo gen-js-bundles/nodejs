@@ -11,9 +11,11 @@ module.exports = {
 
     var outPath = path.join(process.cwd(),data.Genjsfile.config.outDir);
     var command = 'npm install';
-    console.log('=>',command,' in ',outPath);
-    var child = exec(command, {cwd: outPath});
-    child.stdout.pipe(process.stdout);
-    child.stderr.pipe(process.stderr);
+    data.cli.exec(command, {cwd: outPath})
+      .then(function() {
+        if(callback) {
+          callback();
+        }
+      });
   }
 };
